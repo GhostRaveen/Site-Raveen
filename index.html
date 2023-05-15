@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Site-Raveen</title>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="navbar">
+				<div><img class="logo" src="img/logo-roxo-teste.png"></div>
+				<ul class="links">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Projetos</a></li>
+					<li><a href="#">Serviços</a></li>
+					<li><a href="pag/Blog-Raveen/index.html">blog</a></li>
+				</ul>
+				<a href="#" class="action_btn">ORÇAMENTO</a>
+				<div class="toggle_btn">
+					<img src="img/menu-roxo.png" alt="menu button" class="toggle_btn_icon">
+				</div>
+			</div>
+		</div>
+		
+		<div class="dropdown_menu">
+			<hr>
+			<a href="hero"><li>Home</li></a>
+			<hr>
+			<a href="#"><li>Projetos</li></a>
+			<hr>
+			<a href="#"><li>Serviços</li></a>
+			<hr>
+			<a href="pag/Blog-Raveen/index.html"><li>blog</li></a>
+			<hr>
+			<li><a href="#" class="action_btn">ORÇAMENTO</a></li>
+		</div>
+	</header>
+	
+	<main>
+		<section id="hero">
+			<h1>Welcome</h1>
+			<p>Various versions have evolved over the years</p>
+		</section>
+	</main>
+	
+	<script>
+		const toggleBtn = document.querySelector('.toggle_btn')
+		const toggleBtnIcon = document.querySelector('.toggle_btn_icon')
+		const dropDownMenu = document.querySelector('.dropdown_menu')
+		
+		toggleBtn.onclick = function () {
+			dropDownMenu.classList.toggle('open')
+			const isOpen = dropDownMenu.classList.contains('open')
+			
+			toggleBtnIcon.src = isOpen
+				? 'img/x-roxo.png'
+				: 'img/menu-roxo.png'
+		}
+	</script>	
+</body>
+</html>
